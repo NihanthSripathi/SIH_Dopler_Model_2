@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBKNOT</title>
+    <link rel="icon" type="image/png" href="Asset/Designer.png">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        /* nav start */
+
+        .glass-navbar {
+            margin: auto;
+            width: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .glass-navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .glass-navbar li {
+            margin-right: 20px;
+        }
+
+        .glass-navbar a {
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .glass-navbar a:hover {
+            background-color: #ccc;
+        }
+
+        .glass-navbar a.active {
+            background: #4c4c4c;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .glass-navbar .profile {
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .glass-navbar .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        /* nav end */
+        body {
+            margin: 0;
+            height: 100vh;
+            background-image: url('Asset/frame.png');
+            font-family: "Montserrat", sans-serif;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25vh;
+        }
+
+        .card h1 {
+            text-align: center;
+            margin: 35px 0px;
+        }
+
+        .card {
+            max-width: 600px;
+            min-width: 300px;
+            min-height: 400px;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            color: whitesmoke;
+        }
+
+        /*  */
+        .selectbutton {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        /* From Uiverse.io by vinodjangid07 */
+        .Btn-Container {
+            word-wrap: break-word;
+            display: flex;
+            min-width: 350px;
+            height: fit-content;
+            background-color: #1d2129;
+            border-radius: 40px;
+            box-shadow: 0px 5px 10px #bebebe;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:431px) {
+            .Btn-Container {
+                min-width: 295px;
+                /* !important removed */
+            }
+
+            .card {
+                max-width: 350px;
+                height: 400px;
+            }
+        }
+
+        .icon-Container {
+            width: 45px;
+            height: 45px;
+            background-color: #f59aff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 3px solid #1d2129;
+        }
+
+        .text {
+            /* width: fit-content; */
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1em;
+            letter-spacing: 1.2px;
+            padding-left: 20px;
+        }
+
+        .icon-Container svg {
+            transition-duration: 1.5s;
+        }
+
+        .Btn-Container:hover .icon-Container svg {
+            transition-duration: 1.5s;
+            animation: arrow 1s linear infinite;
+        }
+
+        @keyframes arrow {
+            0% {
+                opacity: 0;
+                margin-left: 0px;
+            }
+
+            100% {
+                opacity: 1;
+                margin-left: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="glass-navbar">
+        <h3>WEBKNOT</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="Fileupload.html">File Upload</a></li>
+            <li><a href="result.html">Result</a></li>
+
+        </ul>
+        <div class="profile">
+            <img src="Asset/frame.png" alt="Profile Picture">
+        </div>
+
+    </nav>
+    <div class="body">
+        <div class="container">
+            <div class="card">
+                <h1>Analyze Now</h1>
+                <div class="selectbutton">
+                    <button onclick="handleSubmit(event) " class="Btn-Container">
+                        <span class="text">Click to Analyze Photo</span>
+                        <span class="icon-Container">
+                            <svg width="16" height="19" viewBox="0 0 16 19" fill="nones"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
+                                <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
+                                <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
+                            </svg>
+                        </span>
+                    </button>
+                    <button class="Btn-Container " onclick="handleSubmit(event) ">
+                        <span class="text">Click to Analyze video</span>
+                        <span class="icon-Container">
+                            <svg width="16" height="19" viewBox="0 0 16 19" fill="nones"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
+                                <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
+                                <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
+                            </svg>
+                        </span>
+                    </button>
+                    <button class="Btn-Container" onclick="handleSubmit(event) ">
+                        <span class="text">Doppler Signature Analysis</span>
+                        <span class="icon-Container">
+                            <svg width="16" height="19" viewBox="0 0 16 19" fill="nones"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
+                                <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
+                                <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            window.location.href = '/Fileupload.html';
+        }
+    </script>
+</body>
+
+</html>

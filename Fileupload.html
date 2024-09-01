@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBKNOT</title>
+    <link rel="icon" type="image/png" href="Asset/Designer.png">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* nav start */
+
+        .glass-navbar {
+            margin: auto;
+            width: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .glass-navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .glass-navbar li {
+            margin-right: 20px;
+        }
+
+        .glass-navbar a {
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .glass-navbar a:hover {
+            background-color: #ccc;
+        }
+
+        .glass-navbar a.active {
+            background: #4c4c4c;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .glass-navbar .profile {
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .glass-navbar .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        /* nav end */
+        body {
+            margin: 0;
+            height: 100vh;
+            background-image: url('Asset/frame.png');
+            font-family: "Montserrat", sans-serif;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+
+        }
+
+        .body {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .body .card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px;
+            text-align: center;
+            /* max-width: 800px; */
+            margin: 15% auto;
+            width: 80%;
+            min-height: 400px;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            color: whitesmoke;
+        }
+
+        .card2 {
+            background: rgba(255, 255, 255, 0%);
+            box-shadow: inset 1px 1px 32px 2px rgb(0 0 0);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            color: whitesmoke;
+
+        }
+
+        .body .card h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 40px;
+        }
+
+        /* note start */
+        .note {
+            width: 50%;
+        }
+
+        .discreption {
+            color: white;
+            font-size: 20px;
+        }
+
+        .discreption ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .file-upload {
+            width: 50%;
+        }
+
+
+        .file-upload.container {
+            height: 100vh;
+            width: 100%;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            background-color: #fcfcfc;
+        }
+
+        .file-upload.container.card {
+            border-radius: 10px;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+            width: 600px;
+            height: 260px;
+            background-color: #ffffff;
+            padding: 10px 30px 40px;
+        }
+
+        .file-upload.container.card h3 {
+            font-size: 22px;
+            font-weight: 600;
+
+        }
+
+        .drop_box {
+            margin: 10px 0;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 3px dotted #a3a3a3;
+            border-radius: 5px;
+        }
+
+        .drop_box h4 {
+            font-size: 16px;
+            font-weight: 400;
+            color: #2e2e2e;
+        }
+
+        .drop_box p {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: #a3a3a3;
+        }
+
+        .btn {
+            text-decoration: none;
+            background-color: #005af0;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            text-decoration: none;
+            background-color: #ffffff;
+            color: #005af0;
+            padding: 10px 20px;
+            border: none;
+            outline: 1px solid #010101;
+        }
+
+        .form input {
+            margin: 10px 0;
+            width: 100%;
+            background-color: #e2e2e2;
+            border: none;
+            outline: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+        }
+
+        /* note end */
+    </style>
+</head>
+
+<body>
+    <nav class="glass-navbar">
+        <h3>WEBKNOT</h3>
+        <ul>
+            <li><a href="SelectAnalys.html">Home</a></li>
+            <!-- <li><a href="#">Analyze</a></li> -->
+            <li><a href="#">File Upload</a></li>
+            <li><a href="result.html">Result</a></li>
+
+        </ul>
+        <div class="profile">
+            <img src="Asset/frame.png" alt="Profile Picture">
+        </div>
+
+    </nav>
+
+    <div class="body">
+        <div class="card">
+            <div class="note">
+                <h1>Analyze Now</h1>
+                <div class="discreption">
+                    <ul>
+                        <li>Note :</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                    <div>
+                        <button class="btn mt-3" onclick="handleSubmit(event) "><i class="animation"></i>Analyze<i
+                                class="animation"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="file-upload">
+                <div class="container">
+                    <div class="card2">
+                        <h3>Upload Files</h3>
+                        <div class="drop_box">
+                            <header>
+                                <h4>Select File here</h4>
+                            </header>
+                            <p>Files Supported: PNG, JPG, Video , Doppler Signal</p>
+                            <input type="file" hidden accept=".png,.jpg,.mp4" id="fileID" style="display:none;">
+                            <button class="btn">Choose File</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const dropArea = document.querySelector(".drop_box"),
+            button = dropArea.querySelector("button"),
+            dragText = dropArea.querySelector("header"),
+            input = dropArea.querySelector("input");
+        let file;
+        var filename;
+
+        button.onclick = () => {
+            input.click();
+        };
+        input.onchange = () => {
+            const fileName = input.value.split('\\').pop();
+            span.textContent = `Uploaded: ${fileName}`;
+        };
+        //     input.addEventListener("change", function (e) {
+        //         var fileName = e.target.files[0].name;
+        //         let filedata = `
+        // <form action="" method="post">
+        // <div class="form">
+        // <h4>${fileName}</h4>
+        // <input type="email" placeholder="Enter email upload file">
+        // <button class="btn"  >Upload</button>
+        // </div>
+        // </form>`;
+        //         dropArea.innerHTML = filedata;
+        //     });
+
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            window.location.href = '/result.html';
+        }
+
+    </script>
+</body>
+
+</html>
