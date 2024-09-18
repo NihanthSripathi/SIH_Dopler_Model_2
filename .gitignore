@@ -1,0 +1,19 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore dist and build directories
+dist/
+build/
+
+# Ignore tmp and logs directories
+tmp/
+logs/
+
+# Ignore env and config.json files
+env/
+config.json
+
+# Ignore package-lock.json and yarn.lock files
+package.json
+package-lock.json
+yarn.lock
